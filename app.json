@@ -7,14 +7,21 @@
     "icon": "./assets/images/icon.png",
     "scheme": "weatherapp",
     "userInterfaceStyle": "automatic",
+    "extra": {
+      "OPENWEATHER_API_KEY": "32a3c53ee027e88f725ebe8cfdb5f468"
+    },
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Cette app utilise votre position pour afficher la météo."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "permissions": ["ACCESS_FINE_LOCATION"]
       },
       "edgeToEdgeEnabled": true
     },
